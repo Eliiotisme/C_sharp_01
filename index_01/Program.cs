@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 
 namespace index_01
 {
@@ -1020,6 +1021,252 @@ namespace index_01
             //    {
             //        Console.WriteLine($"答對了,答案是{Guess}");
             //        break;
+            //    }
+            //}
+            //Console.ReadKey();
+
+            //5-1列
+            //Console.WriteLine("求10個數字的平均值");
+            //double[] sum = new double[10];
+            //for(int i = 0; i < sum.Length; i++)
+            //{
+            //    Console.Write($"輸入陣列第{i}值");
+            //    sum[i] = Convert.ToDouble(Console.ReadLine());
+            //}
+
+            //double x = 0;
+            //for (int i = 0; i < sum.Length; i++)
+            //{
+            //    x += sum[i];
+            //}
+            //Console.WriteLine($"平均值是{x / 10}");
+            //Console.ReadKey();
+
+            //5-2列
+            //Console.WriteLine("求10個數字的最大值");
+            //double[] sum = new double[10];
+            //for (int i = 0; i < sum.Length; i++)
+            //{
+            //    Console.Write($"輸入陣列第{i}值");
+            //    sum[i] = Convert.ToDouble(Console.ReadLine());
+            //}
+
+            //double max = 0;
+            //for (int i = 0; i < sum.Length; i++)
+            //{
+            //    if (sum[i] > max) 
+            //    { 
+            //        max = sum[i]; 
+            //    } 
+            //}
+            //Console.WriteLine($"最大值是{max}");
+            //Console.ReadKey();
+
+            //5-3列
+            //Console.WriteLine("判斷x是否存在於A陣列中");
+            //double[] A = new double[10];
+            //for (int i = 0; i < A.Length; i++)
+            //{
+            //    Console.Write($"輸入A陣列第{i}值");
+            //    A[i] = Convert.ToDouble(Console.ReadLine());
+            //}
+
+            //Console.Write($"輸入要判斷的x值");
+            //double x = Convert.ToDouble(Console.ReadLine());
+            //bool B = false;
+            //for (int i = 0; i < A.Length; i++)
+            //{
+            //    if (A[i] == x)
+            //    {
+            //        B = true;
+            //    }
+            //}
+            //if (B) 
+            //{
+            //    Console.WriteLine($"存在");
+            //}
+            //else
+            //{
+            //    Console.WriteLine($"不存在");
+            //}
+            //Console.ReadKey();
+
+            //5-4列
+            //Console.WriteLine("求兩個2乘3的二維矩陣相加之結果，存入C矩陣");
+            //int[,] A = new int[2, 3];
+            //int[,] B = new int[2, 3];
+            //int[,] C = new int[2, 3];
+            //for (int i = 0; i < A.GetLength(0); i++)
+            //{
+            //    for (int j = 0; j < A.GetLength(1); j++)
+            //    {
+            //        Console.Write($"輸入A矩陣第{i},{j} 值");
+            //        A[i,j] = Convert.ToInt32(Console.ReadLine());
+            //        Console.Write($"輸入B矩陣第{i},{j} 值");
+            //        B[i,j] = Convert.ToInt32(Console.ReadLine());
+            //    }
+            //}
+
+            //for (int i = 0; i < A.GetLength(0); i++)
+            //{
+            //    for (int j = 0; j < A.GetLength(1); j++)
+            //    {
+            //        C[i, j] += A[i, j] + B[i, j];
+            //    }
+            //}
+            //foreach (int Hello in C)
+            //{
+            //    Console.WriteLine($"C矩陣依序為{Hello}");
+            //}
+            //Console.ReadKey();
+
+            //5-5列
+            //Console.WriteLine("2乘3的A矩陣乘以3乘1的B矩陣，結果存入2乘1的C矩陣");
+            //int[,] A = new int[2, 3];
+            //int[,] B = new int[3, 1];
+            //int[,] C = new int[2, 1];
+            //for (int i = 0; i < A.GetLength(0); i++)
+            //{
+            //    for (int j = 0; j < A.GetLength(1); j++)
+            //    {
+            //        Console.Write($"輸入A矩陣第{i},{j} 值");
+            //        A[i, j] = Convert.ToInt32(Console.ReadLine());
+            //    }
+            //}
+
+            //for (int i = 0; i < B.GetLength(0); i++)
+            //{
+            //    Console.Write($"輸入B矩陣第{i},0值");
+            //    B[i, 0] = Convert.ToInt32(Console.ReadLine());
+            //}
+
+            //for (int i = 0; i < A.GetLength(0); i++)
+            //{
+            //    for (int j = 0; j < B.GetLength(1); j++)
+            //    {
+            //        for (int k = 0; k < A.GetLength(1); k++)
+            //        {
+            //            C[i, j] += A[i, k] * B[k, j];
+            //        }
+            //    }
+            //}
+            //foreach (int Hello in C)
+            //{
+            //    Console.WriteLine($"C矩陣依序為{Hello}");
+            //}
+            //Console.ReadKey();
+
+
+            //5-1習
+            //Console.WriteLine("如A[i]>5，則令A[i]=A[i]-5，否則A[i]=A[i]+5");
+            //double[] A = new double[10];
+            //for (int i = 0; i < A.Length; i++)
+            //{
+            //    Console.Write($"輸入A陣列第{i}值");
+            //    A[i] = Convert.ToDouble(Console.ReadLine());
+            //}
+
+            //for (int i = 0; i < A.Length; i++)
+            //{
+            //    if (A[i] > 5)
+            //    {
+            //        A[i]-= 5;
+            //    }
+            //    else
+            //    {
+            //        A[i]+= 5;
+            //    }
+            //}
+            //foreach (double Hello in A)
+            //{
+            //    Console.WriteLine(Hello);
+            //}
+            //Console.ReadKey();
+
+            //5-2習
+            //Console.WriteLine("對每一個數字，令A[i]=A[i]+i");
+            //double[] A = new double[10];
+            //for (int i = 0; i < A.Length; i++)
+            //{
+            //    Console.Write($"輸入A陣列第{i}值");
+            //    A[i] = Convert.ToDouble(Console.ReadLine());
+            //}
+
+            //for (int i = 0; i < A.Length; i++)
+            //{
+
+            //    A[i] += i; 
+            //}
+            //foreach (double Hello in A)
+            //{
+            //    Console.WriteLine(Hello);
+            //}
+            //Console.ReadKey();
+
+            //5-3習
+            //Console.WriteLine("將10個數字讀入A陣列，並建立一個B陣列，如A[i]≥0，令B[i]=1，否則令B[i]=0");
+            //double[] A = new double[10];
+            //double[] B = new double[10];
+            //for (int i = 0; i < A.Length; i++)
+            //{
+            //    Console.Write($"輸入A陣列第{i}值");
+            //    A[i] = Convert.ToDouble(Console.ReadLine());
+            //}
+            //for (int i = 0; i < A.Length; i++)
+            //{
+            //    if (A[i] >= 0)
+            //    {
+            //        B[i] = 1;
+            //    }
+            //    else
+            //    {
+            //        B[i] = 0;
+            //    }
+            //}
+            //foreach (double Hello in B)
+            //{
+            //    Console.WriteLine(Hello);
+            //}
+            //Console.ReadKey();
+
+            //5-4習
+            //Console.WriteLine("將15數字存入3×5的二維陣列A中，求每一行及每一列數字的和");
+            //int[,] A = new int[3,5];
+            //int sum = 0;
+            //for (int i = 0; i < A.GetLength(0); i++)
+            //{
+            //    for (int j = 0; j < A.GetLength(1); j++)
+            //    {
+            //        Console.Write($"輸入A矩陣第{i},{j} 值");
+            //        A[i, j] = Convert.ToInt32(Console.ReadLine());
+            //    }
+            //}
+
+            //for (int i = 0; i < A.GetLength(0); i++)
+            //{
+            //    for (int j = 0; j < A.GetLength(1); j++)
+            //    {
+            //        sum += A[i, j];
+            //        if (j == 4)
+            //        {
+            //            Console.WriteLine($"A矩陣第{i}行和為{sum}");
+            //            sum = 0;
+            //        }
+            //    }
+            //}
+
+            //sum = 0;
+            //for (int x = 0; x < A.GetLength(1); x++)
+            //{
+            //    for (int y = 0; y < A.GetLength(0); y++)
+            //    {
+
+            //        sum += A[y, x];
+            //        if (y == 2)
+            //        {
+            //            Console.WriteLine($"A矩陣第{x}列和為{sum}");
+            //            sum = 0;
+            //        }
             //    }
             //}
             //Console.ReadKey();
