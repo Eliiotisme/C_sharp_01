@@ -1270,6 +1270,113 @@ namespace index_01
             //    }
             //}
             //Console.ReadKey();
+
+            //5-5習
+            //Console.WriteLine("將15數字存入3×5的二維陣列A中，求每一行及每一列數字的最小值");
+            //int[,] A = new int[3, 5];
+            //int min = int.MaxValue;
+            //for (int i = 0; i < A.GetLength(0); i++)
+            //{
+            //    for (int j = 0; j < A.GetLength(1); j++)
+            //    {
+            //        Console.Write($"輸入A矩陣第{i},{j} 值");
+            //        A[i, j] = Convert.ToInt32(Console.ReadLine());
+            //    }
+            //}
+
+            //for (int i = 0; i < A.GetLength(0); i++)
+            //{
+            //    for (int j = 0; j < A.GetLength(1); j++)
+            //    {
+            //        if (min > A[i, j])
+            //        {
+            //            min = A[i, j];
+            //        }
+            //        if (j == 4)
+            //        {
+            //            Console.WriteLine($"A矩陣第{i}行最小值為{min}");
+            //            min = int.MaxValue;
+            //        }
+            //    }
+            //}
+
+            //min = int.MaxValue;
+            //for (int x = 0; x < A.GetLength(1); x++)
+            //{
+            //    for (int y = 0; y < A.GetLength(0); y++)
+            //    {
+
+            //        if (min > A[y, x])
+            //        {
+            //            min = A[y, x];
+            //        }
+            //        if (y == 2)
+            //        {
+            //            Console.WriteLine($"A矩陣第{x}列最小值為{min}");
+            //            min = int.MaxValue;
+            //        }
+            //    }
+            //}
+            //Console.ReadKey();
+
+            //5-6習
+            //Console.WriteLine("輸入兩組數字：a1,a2,…,a5和b1,b2,…,b5。求ai+bi，i=1到i=5");
+            //double[] A = new double[6];
+            //double[] B = new double[6];
+            //double C = 0;
+            //for (int i = 0; i < A.Length; i++)
+            //{
+            //    Console.Write($"輸入A陣列第{i}值");
+            //    A[i] = Convert.ToDouble(Console.ReadLine());
+            //    Console.Write($"輸入B陣列第{i}值");
+            //    B[i] = Convert.ToDouble(Console.ReadLine());
+            //}
+            //for (int i = 0; i < A.Length; i++)
+            //{
+            //    if(i == 0)
+            //    {
+            //        continue;
+            //    }
+            //    C = A[i] + B[i];
+            //    Console.WriteLine($"A{i}+B{i}={C}");
+            //}
+            //Console.ReadKey();
+
+            //5-7習
+            //Console.WriteLine("輸入兩組數字：a1,a2,…,a5和b1,b2,…,b5。令x為a中的最大值，令y為b中的最大值，求x與y中較小者");
+            //int[] A = new int[5];
+            //int[] B = new int[5];
+            //int x=int.MinValue, y=int.MinValue;
+            //for (int i = 0; i < A.Length; i++)
+            //{
+            //    Console.Write($"輸入A陣列第{i}值");
+            //    A[i] = Convert.ToInt32(Console.ReadLine());
+            //    Console.Write($"輸入B陣列第{i}值");
+            //    B[i] = Convert.ToInt32(Console.ReadLine());
+            //}
+            //for (int i = 0; i < A.Length; i++)
+            //{
+            //    if (A[i] > x)
+            //    {
+            //        x = A[i];
+            //    }
+            //}
+            //for (int i = 0; i < B.Length; i++)
+            //{
+            //    if (B[i] > y)
+            //    {
+            //        y = B[i];
+            //    }
+            //}
+            //if (x < y) 
+            //{
+            //    Console.WriteLine($"x與y中較小者為x:{x}");
+            //}
+            //else
+            //{
+            //    Console.WriteLine($"x與y中較小者為y:{y}");
+            //}
+            //Console.ReadKey();
         }
     }
 }
