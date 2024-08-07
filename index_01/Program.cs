@@ -1377,6 +1377,413 @@ namespace index_01
             //    Console.WriteLine($"x與y中較小者為y:{y}");
             //}
             //Console.ReadKey();
+
+
+
+            //字串.1
+            //Console.Write("輸入姓名:");
+            //string mane = Console.ReadLine();
+            //Console.WriteLine($"Hi~{mane}");
+            //Console.ReadKey();
+
+            //字串.2
+            //string test_srting = "人人為我，我為人人、饒人不癡漢，癡漢不饒人";
+            //Console.Write("輸入要判斷的字串:");
+            //string inputstring = Console.ReadLine();
+            //bool Answer = test_srting.Contains(inputstring);
+            //if (Answer)
+            //{
+            //    Console.WriteLine("存在");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("不存在");
+            //}
+            //Console.ReadKey();
+
+            //字串.3
+            //Console.Write("輸入字串:");
+            //string inputstring = Console.ReadLine();
+            //string outputstring = null;
+            //string Dash = "-";
+            //for (int i = 0; i < inputstring.Length; i++) 
+            //{
+            //    outputstring += inputstring[i] + Dash;
+            //}
+            //string result = outputstring.Substring(0, outputstring.Length - 1);
+            //Console.WriteLine(result);
+            //Console.ReadKey();
+
+            //字串.4
+            //Console.Write("輸入檔名:");
+            //string inputstring = Console.ReadLine();
+            //int Location = inputstring.IndexOf('.');
+            //string result = inputstring.Substring(Location + 1);
+            //Console.WriteLine(result);
+            //Console.ReadKey();
+
+            //字串.4
+            //Console.Write("輸入字串:");
+            //string inputstring = Console.ReadLine();
+            //if ((inputstring.Length) > 5)
+            //{
+            //    string result = inputstring.Substring(0, 3);
+            //    Console.WriteLine(result);
+            //}
+            //else 
+            //{
+            //    Console.WriteLine("長度不夠");
+            //}
+            //Console.ReadKey();
+
+            //字串.5
+            //Console.Write("輸入字串:");
+            //string inputstring = Console.ReadLine();
+            //string result = inputstring.Replace("我", "小明");
+            //Console.WriteLine(result);
+            //Console.ReadKey();
+
+            //字串.6
+            //Console.Write("輸入字串:");
+            //string inputstring = Console.ReadLine();
+            //Console.WriteLine($"你輸入{inputstring.Length}個字");
+            //Console.ReadKey();
+
+            //字串.7
+            //Console.WriteLine("連續輸入10組字串判斷有無輸入過");
+            //string[] A = new string[10];
+            //for (int i = 0; i < A.Length; i++)
+            //{
+            //    Console.Write($"輸入第{i}字串:");
+            //    string result = Console.ReadLine();
+            //    for (int j = 0; j < A.Length; j++)
+            //    {
+            //        int num = result.CompareTo(A[j]);
+            //        if (num == 0)
+            //        {
+            //            Console.WriteLine("輸入過");
+            //            break;
+            //        }
+            //        else if (j == 9)
+            //        {
+            //            Console.WriteLine("沒出現過");
+            //            A[i] = result;
+            //        }
+
+            //    }
+            //}
+            //Console.ReadKey();
+
+            //字串.8
+            //Console.WriteLine("用字母大小寫來模擬波浪舞");
+            //Console.Write("輸入字串:");
+            //string inputstring = Console.ReadLine();
+            //string lowerStr = inputstring.ToLower();
+            //for (int i = 0; i < lowerStr.Length; i++)
+            //{
+            //    string toUpper = lowerStr.Substring(i,1).ToUpper();
+            //    string modified = lowerStr.Insert(i, toUpper);
+            //    string result1 = modified.Remove((i + 1), 1);
+            //    Console.WriteLine(result1);
+            //}
+            //Console.ReadKey();
+
+            //字串.9
+            //Console.WriteLine("輸入時間，顯示幾時幾分");
+            //Console.Write("輸入時間例如'12:30':");
+            //string inputstring = Console.ReadLine().Trim();
+            //int index = inputstring.IndexOf(":");
+            //string outputstring01 = inputstring.Substring(0, index);
+            //string outputstring02 = inputstring.Substring(index + 1);
+            //bool aa = outputstring01.StartsWith("0");
+            //if (aa)
+            //{
+            //    Console.WriteLine($"{outputstring01[1]}點{outputstring02}分");
+            //}
+            //else
+            //{
+            //    Console.WriteLine($"{outputstring01}點{outputstring02}分");
+            //}
+            //Console.ReadKey();
+
+            //字串.10
+            //Console.WriteLine("輸入的字，轉成HTML");
+            //Console.Write("輸入字串:");
+            //string inputstring = Console.ReadLine();
+            //string[] words = inputstring.Split(',');
+            //string[] aaa = new string[words.Length];
+            //int num = 0;
+            //foreach (string word in words) 
+            //{
+            //    aaa[num] = word;
+            //    num++;
+            //}
+            //Console.WriteLine($"<ul> \n    <li>{aaa[0]}</li>\n    <li>{aaa[1]}</li>\n    <li>{aaa[2]}</li>\n</ul>");
+            //Console.ReadKey();
+
+            //字串.11
+            //Console.WriteLine("輸入5處數字，用空白隔開，求總和");
+            //Console.Write("輸入數字:");
+            //string inputstring = Console.ReadLine();
+            //string[] words = inputstring.Split(' ');
+            //int sum = 0;
+            //for (int i = 0; i < words.Length; i++) 
+            //{
+            //    sum += Convert.ToInt32(words[i]);
+            //}
+            //Console.WriteLine($"總合為:{sum}");
+            //Console.ReadKey();
+
+            //字串.12
+            //Console.WriteLine("請輸入一個字符串：");
+            //string inputstring = Console.ReadLine();
+            //char[] charArray = inputstring.ToCharArray();
+            //Array.Reverse(charArray);
+            //string reversedString = new string(charArray);
+            //Console.WriteLine(reversedString);
+            //Console.ReadKey();
+
+            //Function-1
+            //Console.WriteLine("將文字轉成html格式");
+            //Console.Write("輸入文字:");
+            //string aa = Console.ReadLine();
+            //CountArea(aa);
+            //Console.ReadKey();
+            //void CountArea(string a)
+            //{
+            //    string b = null;
+            //    for (int i = 0; i < 6; i++)
+            //    {
+
+            //        if (a.Contains(">") && i <= 1)
+            //        {
+            //            b = a.Replace(">", "&gt;");
+            //        }
+            //        else if (a.Contains("<") && i <= 1)
+            //        {
+            //            b = a.Replace("<", "&lt;");
+            //        }
+            //        else if (a.Contains(" "))
+            //        {
+            //            b = a.Replace(" ", "&nbsp;");
+            //        }
+            //        else if (a.Contains("\\r\\n"))
+            //        {
+            //            b = a.Replace("\\r\\n", "<br>");
+            //        }
+            //        else if (a.Contains("|"))
+            //        {
+            //            b = a.Replace("|", "&brvbar;");
+            //        }
+            //        a = b;
+
+            //    }
+            //    Console.WriteLine(a);
+            //}
+
+            //Function-2
+            //Console.WriteLine("判斷是否為數字");
+            //Console.Write("輸入字串:");
+            //string aa = Console.ReadLine();
+            //CountArea(aa);
+            //Console.ReadKey();
+            //void CountArea(string a)
+            //{
+
+            //    foreach (char c in a)
+            //    {
+            //        if (!char.IsDigit(c))
+            //        {
+            //            Console.WriteLine("不是數字");
+            //        }
+            //        else
+            //        {
+            //            Console.WriteLine("是數字");
+            //        }
+            //    }
+            //}
+
+            //Function-3
+            //Console.WriteLine("判斷是否為電子信箱格式");
+            //Console.Write("輸入字串:");
+            //string aa = Console.ReadLine();
+            //CountArea(aa);
+            //Console.ReadKey();
+            //void CountArea(string a)
+            //{
+            //    string pattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
+
+            //    Regex ReObj = new Regex(pattern); 
+
+            //    bool bb = ReObj.IsMatch(a);
+            //    if (bb)
+            //    {
+            //        Console.WriteLine("是電子信箱格式");
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("不是電子信箱格式");
+            //    }
+            //}
+
+            //Function-4
+            //Console.WriteLine("判斷是否為手機格式");
+            //Console.Write("輸入字串:");
+            //string aa = Console.ReadLine();
+            //CountArea(aa);
+            //Console.ReadKey();
+            //void CountArea(string a)
+            //{
+            //    string pattern = @"^09\d{8}$";
+
+            //    Regex ReObj = new Regex(pattern);
+
+            //    bool bb = ReObj.IsMatch(a);
+            //    if (bb)
+            //    {
+            //        Console.WriteLine("是手機格式");
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("不是手機格式");
+            //    }
+            //}
+
+            //Function-5
+            //Console.WriteLine("判斷是否為身分證字號格式");
+            //Console.Write("輸入字串:");
+            //string aa = Console.ReadLine();
+            //CountArea(aa);
+            //Console.ReadKey();
+            //void CountArea(string a)
+            //{
+            //    string pattern = @"^[A-Z]\d{9}$";
+
+            //    Regex ReObj = new Regex(pattern);
+
+            //    bool bb = ReObj.IsMatch(a);
+            //    if (bb)
+            //    {
+            //        Console.WriteLine("是身分證字號格式");
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("不是身分證字號格式");
+            //    }
+            //}
+
+            //Function-6
+            //Console.WriteLine("輸入文字大於Ｎ個，則超過的字不要，變成點點點");
+            //Console.Write("輸入字串:");
+            //string aa = Console.ReadLine();
+            //Console.Write("輸入超過幾個數字:");
+            //int bb = Convert.ToInt32(Console.ReadLine());
+            //CountArea(aa, bb);
+            //Console.ReadKey();
+            //void CountArea(string a, int b)
+            //{
+            //    string dd = a.Substring(0, b);
+            //    string gg = ".";
+            //    for (int i = b; i < a.Length; i++)
+            //    { 
+            //        dd += gg;
+            //    }
+            //    Console.WriteLine(dd);
+            //}
+
+            //Function-7
+            //Console.WriteLine("輸入一個日期，把該日期轉成民國年.月.日格式");
+            //Console.Write("輸入字串:");
+            //string aa = Console.ReadLine();
+            //CountArea(aa);
+            //Console.ReadKey();
+            //void CountArea(string a)
+            //{
+            //    string dd = a.Substring(0, 4);
+            //    int year = Convert.ToInt32(dd);
+            //    int roc = year - 1911;
+            //    string rocstr = Convert.ToString(roc);
+            //    string gg = ".";
+            //    string month = a.Substring(4, 2);
+            //    string day = a.Substring(6, 2);
+            //    rocstr += gg + month + gg + day;
+            //    Console.WriteLine(rocstr);
+            //}
+
+            //Function-8
+            //Console.WriteLine("輸入一個日期，把該轉成民國XX年XX月XX日 星期X 格式");
+            //Console.Write("輸入字串:");
+            //string aa = Console.ReadLine();
+            //CountArea(aa);
+            //Console.ReadKey();
+            //void CountArea(string a)
+            //{
+            //    string dd = a.Substring(0, 4);
+            //    int year = Convert.ToInt32(dd);
+            //    int roc = year - 1911;
+            //    string rocstr = Convert.ToString(roc);
+            //    string month = a.Substring(4, 2);
+            //    string day = a.Substring(6, 2);
+            //    string week = a.Substring(8, 1);
+            //    rocstr += "年" + month + "月" + day + "日" + "星期" + week;
+            //    Console.WriteLine(rocstr);
+            //}
+
+            //Function-9
+            //Console.WriteLine("判斷輸入的年是否閏年");
+            //Console.Write("輸入字串:");
+            //int aa = Convert.ToInt32(Console.ReadLine());
+            //CountArea(aa);
+            //Console.ReadKey();
+            //void CountArea(int a)
+            //{
+            //    if (a % 4 == 0)
+            //    {
+            //        if (a % 100 != 0)
+            //        {
+            //            Console.WriteLine("是閏年");
+            //        }
+            //        else
+            //        {
+            //            if (a % 400 == 0)
+            //            {
+            //                Console.WriteLine("是閏年");
+            //            }
+            //            else
+            //            {
+            //                if (a % 1000 == 0)
+            //                {
+            //                    Console.WriteLine("是閏年");
+            //                }
+            //                else
+            //                {
+            //                    Console.WriteLine("不是閏年");
+            //                }
+            //            }
+            //        }
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("不是閏年");
+            //    }
+            //}
+
+            //Function-10
+            //Console.WriteLine("輸入手機號碼，回傳今天運勢(手機運勢算法：用你的手機號碼的最後四位數除以80，再減去整數部分（只留小數），再乘以80，就會得到一個數，這就是代表吉凶的數字");
+            //Console.Write("輸入字串:");
+            //string aa = Console.ReadLine();
+            //CountArea(aa);
+            //Console.ReadKey();
+            //void CountArea(string a)
+            //{
+            //    string lastFourDigits = a.Substring(a.Length - 4);
+            //    int lastFourDigitsInt = int.Parse(lastFourDigits);
+            //    double result = (lastFourDigitsInt % 80) / 80.0;
+            //    result = result - Math.Floor(result);
+            //    result = result * 80;
+
+            //    Console.WriteLine(result);
+            //}
         }
     }
 }
