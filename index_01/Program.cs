@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
+using System.IO;
+using System.Diagnostics;
 
 namespace index_01
 {
@@ -1784,6 +1786,419 @@ namespace index_01
 
             //    Console.WriteLine(result);
             //}
+
+
+            //for (int i = 1; i < 10; i += 3)//分成上中下三個區塊1,4,7,每個區塊開頭差3
+            //{
+            //    for (int j = 1; j < 10; j++)//每區塊會從1-9共跑9次
+            //    {
+            //        for (int k = i; k < (i + 3); k++)//*前方數字每行從i開始,符合<i+3就跑一圈
+            //        {
+            //            Console.Write($"{k:##} * {j:##} = {k * j:##}\t");
+            //            //每次輸出不換行但用\t隔開,直到k=(i+3)
+            //        }
+            //        Console.WriteLine();//不符合k<(i+3)後跳出迴圈並換行
+            //    }
+            //    Console.WriteLine();//跑完每一個區塊後換行,也就是i=3,6,9時
+            //}
+            //Console.ReadKey();
+
+            //檔案-1
+            //Console.WriteLine("寫一篇中文歌的歌詞到到自己指定的文字檔(使用UTF-8編碼)");
+            //string path = @"C:\Users\male7\Desktop\C_sharp_01\MyTest.txt";
+
+            //string lyrics = "再給我兩分鐘\t讓我把記憶結成冰\n別融化了眼淚 妳妝都花了要我怎麼記得";
+
+            //File.WriteAllText(path, lyrics, Encoding.UTF8);
+            //Console.ReadKey();
+
+            //檔案-2
+            //Console.WriteLine("寫入九九乘法表資料到一個文字檔到自己指定的文字檔");
+            //string path = @"C:\Users\male7\Desktop\C_sharp_01\MyTest_02.txt";
+
+            //for (int i = 1; i < 10; i += 3)
+            //{
+            //    for (int j = 1; j < 10; j++)
+            //    {
+            //        for (int k = i; k < (i + 3); k++)
+            //        {
+            //            string result = string.Format($"{k:##} * {j:##} = {k * j:##}\t");
+            //            File.AppendAllText(path, result);
+            //        }
+            //        string newline_01 = "\n";
+            //        File.AppendAllText(path, newline_01);
+            //    }
+            //    string newline_02 = "\n";
+            //    File.AppendAllText(path, newline_02);
+            //}
+            //Console.ReadKey();
+
+            //檔案-3
+            //Console.WriteLine("讀取1.txt 顯示在畫面上，並將1.txt 裡的阿拉伯數字，轉換成中文數字(壹、貳、叁、肆…..)，並儲存到指定的路徑。(UTF-8)");
+
+            //string num_path = @"C:\Users\male7\Desktop\C_sharp_01\1.txt";
+
+            //string num = "987654321";
+
+            //File.WriteAllText(num_path, num);
+
+            //string str = File.ReadAllText(num_path);
+
+            //string strnum = string.Empty;
+
+            //foreach (char str2 in str)
+            //{
+            //    if (str2.ToString() == "1")
+            //    {
+            //        strnum += "壹、";
+            //    }
+            //    else if (str2.ToString() == "2")
+            //    {
+            //        strnum += "貳、";
+            //    }
+            //    else if (str2.ToString() == "3")
+            //    {
+            //        strnum += "參、";
+            //    }
+            //    else if (str2.ToString() == "4")
+            //    {
+            //        strnum += "肆、";
+            //    }
+            //    else if (str2.ToString() == "5")
+            //    {
+            //        strnum += "伍、";
+            //    }
+            //    else if (str2.ToString() == "6")
+            //    {
+            //        strnum += "陸、";
+            //    }
+            //    else if (str2.ToString() == "7")
+            //    {
+            //        strnum += "柒、";
+            //    }
+            //    else if (str2.ToString() == "8")
+            //    {
+            //        strnum += "捌、";
+            //    }
+            //    else if (str2.ToString() == "9")
+            //    {
+            //        strnum += "玖、";
+            //    }
+            //    else if (str2.ToString() == "0")
+            //    {
+            //        strnum += "零、";
+            //    }
+            //}
+            //string result = strnum.Trim('、');
+            //File.WriteAllText(num_path, result, Encoding.UTF8);
+            //Console.ReadKey();
+
+            //檔案-4
+            //Console.WriteLine("讀取fc4bb.csv，並將此資料轉成HTML TABLE 格式，並儲存到指定的HTML檔裡");
+            //string csv_path = @"C:\Users\male7\Desktop\C_sharp_01\fc4bb.csv";
+            //string html_path = @"C:\Users\male7\Desktop\C_sharp_01\testcsv.html";
+
+            //string csv_str = File.ReadAllText(csv_path);
+            //string[] csv_lines = csv_str.Split(',');
+
+            //using (var writer = new StreamWriter(html_path))
+            //{
+            //    writer.WriteLine("<html><body><table border='1'>");
+            //    writer.WriteLine("<tr>");
+
+            //    foreach (var column in csv_lines)
+            //    {
+            //        writer.WriteLine($"<td>{column}</td>");
+            //    }
+
+            //    writer.WriteLine("</tr>");
+            //}
+            //Console.ReadKey();
+
+            //亂數-1
+            //Console.WriteLine("請隨機由0~99產生一個數字輸出");
+            //Random for_99num = new Random();
+            //int I = for_99num.Next(0, 100);
+            //Console.WriteLine(I);
+            //Console.ReadKey();
+
+            //亂數-2
+            //Console.WriteLine("請隨機由0~99產生10個數字輸出");
+            //Random for_99num = new Random();
+            //int[] ints = new int[10];
+            //for (int i = 0; i < 10; i++) 
+            //{
+            //    int ten_num = for_99num.Next(0, 100);
+            //    ints[i] = ten_num;
+            //}
+            //foreach (int j in ints) 
+            //{
+            //    Console.WriteLine(j);
+            //}
+            //Console.ReadKey();
+
+            //亂數-3
+            //Console.WriteLine("隨機幫每位學員產生成績，並寫入文字檔(欄位之間用，分開，換行寫入下一筆)");
+            //string score_path = @"C:\Users\male7\Desktop\C_sharp_01\student_score.txt";
+            //Random for_99num = new Random();
+            //for (int i = 0; i < 10; i++)
+            //{
+            //    int student_score = for_99num.Next(0, 100);
+            //    string result = string.Format($"座號{i+1}學生的成績是: {student_score}分\n\n");
+            //    File.AppendAllText(score_path, result);
+            //}
+            //Console.ReadKey();
+
+            //亂數-4
+            //Console.WriteLine("請設計樂透開獎程式");
+            //Random for_99num = new Random();
+            //for (int i = 1; i <= 7; i++)
+            //{
+            //    int ten_num = for_99num.Next(1, 50);
+            //    if (i == 7)
+            //    {
+            //        Console.WriteLine($"特別號為: {ten_num}");
+            //    }
+            //    else 
+            //    {
+            //        Console.WriteLine($"第{i}個號碼為: {ten_num}");
+            //    }
+            //}
+            //Console.ReadKey();
+
+            //亂數-5
+            //Console.WriteLine("請在文字檔裡輸入所有午餐的店家，讀取文字檔，隨機抽出今天中午要吃哪一家");
+            //string Lunch_path = @"C:\Users\male7\Desktop\C_sharp_01\Lunch.txt";
+            //string[] Lunch_lines = File.ReadAllLines(Lunch_path);
+            //Random for_99num = new Random();
+            //int I = for_99num.Next(1, 6);
+            //if (I == 1)
+            //{
+            //    Console.WriteLine($"中午吃{Lunch_lines[0]}");
+            //}
+            //else if (I == 2) 
+            //{
+            //    Console.WriteLine($"中午吃{Lunch_lines[1]}");
+            //}
+            //else if (I == 3)
+            //{
+            //    Console.WriteLine($"中午吃{Lunch_lines[2]}");
+            //}
+            //else if (I == 4)
+            //{
+            //    Console.WriteLine($"中午吃{Lunch_lines[3]}");
+            //}
+            //else if (I == 5)
+            //{
+            //    Console.WriteLine($"中午吃{Lunch_lines[4]}");
+            //}
+            //Console.ReadKey();
+
+            //亂數-6
+            //Console.WriteLine("請在文字檔裡輸入所有教室裡的學員名字，讀取文字檔，隨機抽出今天的值日生，抽過不能再被抽中，直到全部學員都被抽過，才可以再被抽");
+            //string On_duty_path = @"C:\Users\male7\Desktop\C_sharp_01\On_duty.txt";
+            //string[] On_duty_lines = File.ReadAllLines(On_duty_path);
+            //Random for_99num = new Random();
+            //int a=1,b=1,d=0;
+            //int[] c = new int[5];
+            //while (true) 
+            //{
+            //    int I = for_99num.Next(1, 6);
+            //    if (c.Contains(I))
+            //    {
+            //        continue;
+            //    }
+
+            //    if (I == 1)
+            //    {
+            //        Console.WriteLine($"第{a}周星期{b}值日生是 : {On_duty_lines[0]}");
+            //        b++;
+            //        c[d] = I;
+            //        d++;
+            //    }
+            //    else if (I == 2)
+            //    {
+            //        Console.WriteLine($"第{a}周星期{b}值日生是 : {On_duty_lines[1]}");
+            //        b++;
+            //        c[d] = I;
+            //        d++;
+            //    }
+            //    else if (I == 3)
+            //    {
+            //        Console.WriteLine($"第{a}周星期{b}值日生是 : {On_duty_lines[2]}");
+            //        b++;
+            //        c[d] = I;
+            //        d++;
+            //    }
+            //    else if (I == 4)
+            //    {
+            //        Console.WriteLine($"第{a}周星期{b}值日生是 : {On_duty_lines[3]}");
+            //        b++;
+            //        c[d] = I;
+            //        d++;
+            //    }
+            //    else if (I == 5)
+            //    {
+            //        Console.WriteLine($"第{a}周星期{b}值日生是 : {On_duty_lines[4]}");
+            //        b++;
+            //        c[d] = I;
+            //        d++;
+            //    }
+
+            //    if (b == 6) 
+            //    {
+            //        b = 1;
+            //        a++;
+            //        c = new int[5];
+            //        d = 0;
+            //    }
+
+            //    if(a == 3)
+            //    {
+            //        break;
+            //    }
+            //}
+            //Console.ReadKey();
+
+            //日期-1
+            //Console.WriteLine("顯示現在日期與時間");
+            //DateTime a = DateTime.Now;
+            //Console.WriteLine($"今年 {a.Year}年 {a.Month}月 {a.Day}日 {a.Hour}時:{a.Minute}分:{a.Second}秒");
+            //Console.ReadKey();
+
+            //日期-2
+            //Console.WriteLine("顯示再過30天為哪一天");
+            //DateTime noww = DateTime.Now;
+            //DateTime futureday = noww.AddDays(30);
+            //Console.WriteLine($"再過30天為{futureday}");
+            //Console.ReadKey();
+
+            //日期-3
+            //Console.WriteLine("顯示24小時前的年月日時分秒");
+            //DateTime noww = DateTime.Now;
+            //DateTime pastday = noww.AddDays(-1);
+            //Console.WriteLine($"24小時前為{pastday}");
+            //Console.ReadKey();
+
+            //日期-4
+            //DateTime now = DateTime.Now;
+            //int month = now.Month;
+            //Console.WriteLine($"目前是{month}月");
+            //Console.ReadKey();
+
+            //日期-5
+            //Console.WriteLine("取得明年是否為閏年");
+            //double year = 2025;
+            //if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0))
+            //{
+            //    Console.WriteLine($"是閏年");
+            //}
+            //else
+            //{
+            //    Console.WriteLine($"不是閏年");
+            //}
+            //Console.ReadKey();
+
+            //日期-6
+            //Console.WriteLine("取得離2025年1月1日還有幾天");
+            //DateTime today = DateTime.Today;
+            //DateTime newyear = new DateTime(2025, 1, 1);
+            //int next = (int)(newyear - today).TotalDays;
+            //Console.WriteLine($"距離2025 / 1 / 1還有{next}天");
+            //Console.ReadKey();
+
+            //日期-7
+            //Console.WriteLine("請顯示今天猴子做甚麼事");
+            //DateTime week = DateTime.Today;
+            //if (week.DayOfWeek.ToString() == "Monday") 
+            //{
+            //    Console.WriteLine("猴子穿新衣");
+            //}
+            //else if (week.DayOfWeek.ToString() == "Tuesday")
+            //{
+            //    Console.WriteLine("猴子肚子餓");
+            //}
+            //else if (week.DayOfWeek.ToString() == "Wednesday")
+            //{
+            //    Console.WriteLine("猴子去爬山");
+            //}
+            //else if (week.DayOfWeek.ToString() == "Thursday")
+            //{
+            //    Console.WriteLine("猴子看電視");
+            //}
+            //else if (week.DayOfWeek.ToString() == "Friday")
+            //{
+            //    Console.WriteLine("猴子去跳舞");
+            //}
+            //else if (week.DayOfWeek.ToString() == "Saturday")
+            //{
+            //    Console.WriteLine("猴子去斗六");
+            //}
+            //else if (week.DayOfWeek.ToString() == "Sunday")
+            //{
+            //    Console.WriteLine("猴子過生日");
+            //}
+            //Console.ReadKey();
+
+            //日期-8
+            //Console.WriteLine("輸入‘兩個日期，輸出兩個日期相差幾天");
+            //Console.Write("輸入第一個日期: ");
+            //string a = Console.ReadLine();
+            //Console.Write("輸入第二個日期: ");
+            //string b = Console.ReadLine();
+
+            //string[] a_line = a.Split(',');
+            //string[] b_line = b.Split(',');
+
+            //DateTime day_one = new DateTime(Convert.ToInt32(a_line[0]), Convert.ToInt32(a_line[1]), Convert.ToInt32(a_line[2]));
+            //DateTime day_two = new DateTime(Convert.ToInt32(b_line[0]), Convert.ToInt32(b_line[1]), Convert.ToInt32(b_line[2]));
+
+            //int sum = (int)(day_one - day_two).TotalDays;
+            //Console.WriteLine($"兩個日期距離{Math.Abs(sum)}天");
+            //Console.ReadKey();
+
+            //日期-9
+            //Console.WriteLine("隨機產生一個今年日期，然後公式，得到S的值，再依照S的值從0到2分別給與 普通、吉、大吉 等三種不同的運勢，輸出運勢");
+            //Random month_num = new Random();
+            //int random_month_num = month_num.Next(1, 13);
+
+            //int dday;
+            //if ((random_month_num == 4) || (random_month_num == 6) ||
+            //    (random_month_num == 9) || (random_month_num == 11))
+            //{
+            //    Random day30_num = new Random();
+            //    int random_day30_num = day30_num.Next(1, 31);
+            //    dday = random_day30_num;
+            //}
+            //else if (random_month_num == 2)
+            //{
+            //    Random day28_num = new Random();
+            //    int random_day28_num = day28_num.Next(1, 29);
+            //    dday = random_day28_num;
+            //}
+            //else 
+            //{
+            //    Random day31_num = new Random();
+            //    int random_day31_num = day31_num.Next(1, 32);
+            //    dday = random_day31_num;
+            //}
+
+            //double s = (random_month_num * 2 + dday) % 3;
+
+            //if (s == 0) 
+            //{
+            //    Console.WriteLine($"2024年{random_month_num}月{dday}日的運勢為:普通");
+            //}
+            //else if (s == 1) 
+            //{
+            //    Console.WriteLine($"2024年{random_month_num}月{dday}日的運勢為:吉");
+            //}
+            //else if (s == 2)
+            //{
+            //    Console.WriteLine($"2024年{random_month_num}月{dday}日的運勢為:大吉");
+            //}
+            //Console.ReadKey();
+
         }
     }
 }
